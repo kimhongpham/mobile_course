@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quản lý nhân viên"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:textStyle="bold"
+        android:textColor="#388E3C" />
+
+    <TextView style="@style/InputLabel" android:text="Mã NV:" />
+    <EditText
+        android:id="@+id/etMaNV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Nhập mã nhân viên"
+        android:layout_marginBottom="8dp" />
+
+    <TextView style="@style/InputLabel" android:text="Tên NV:" />
+    <EditText
+        android:id="@+id/etTenNV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:hint="Nhập tên nhân viên"
+        android:layout_marginBottom="12dp" />
+
+    <TextView style="@style/InputLabel" android:text="Loại NV:" />
+    <RadioGroup
+        android:id="@+id/rgLoaiNV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/rbChinhThuc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chính thức"
+            android:checked="true"
+            android:layout_marginEnd="16dp" />
+
+        <RadioButton
+            android:id="@+id/rbThoiVu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thời vụ" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnNhapNV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nhập NV"
+        android:layout_marginBottom="24dp" />
+
+    <ListView
+        android:id="@+id/lvNhanVien"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#E0E0E0"
+        android:dividerHeight="1dp" />
+
+</LinearLayout>
