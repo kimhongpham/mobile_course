@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".RegisterSubjectActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvHeaderWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xin chào [Username] \nHãy đăng ký môn học"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#3F51B5"
+            android:layout_marginBottom="16dp"/>
+
+        <CheckBox
+            android:id="@+id/cbCPlusPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lập trình C++" />
+
+        <CheckBox
+            android:id="@+id/cbMIS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MIS" />
+
+        <CheckBox
+            android:id="@+id/cbAI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI Ứng dụng" />
+
+        <CheckBox
+            android:id="@+id/cbProject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đồ Án Thực Tế" />
+
+        <!-- Nút Đăng ký để tính tổng tiền -->
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#CCCCCC"
+            android:text="ĐĂNG KÝ" />
+
+        <!-- Hiển thị tổng tiền -->
+        <TextView
+            android:id="@+id/tvTotalFee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FF0000"
+            android:text="Tổng tiền: 0 VNĐ" />
+
+        <TextView
+            android:id="@+id/tvSubjectList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:text="Danh sách môn đăng ký:" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginVertical="24dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tình trạng đăng ký"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#C2185B"
+            android:layout_marginBottom="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbTemporary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tạm thời" />
+
+            <RadioButton
+                android:id="@+id/rbOfficial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chính thức" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XÁC NHẬN"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#CCCCCC"/>
+
+        <!-- Nút Thanh Toán mới -->
+        <Button
+            android:id="@+id/btnProceedToPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="THANH TOÁN"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#4CAF50"/>
+    </LinearLayout>
+</ScrollView>
