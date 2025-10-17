@@ -10,7 +10,6 @@ class RegisterSubjectActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterSubjectBinding
 
-    // Định nghĩa học phí cho mỗi môn học (đơn vị: nghìn VNĐ)
     private val subjectFees = mapOf(
         "Lập trình C++" to 5000,
         "MIS" to 3000,
@@ -27,7 +26,6 @@ class RegisterSubjectActivity : AppCompatActivity() {
         val username = intent.getStringExtra("EXTRA_USERNAME") ?: "bạn"
         binding.tvHeaderWelcome.text = "Xin chào $username \nHãy đăng ký môn học"
 
-        // --- Nút Đăng ký: hiển thị danh sách và tính tổng tiền ---
         binding.btnRegister.setOnClickListener {
             displaySelectedSubjectsAndCalculateFee()
         }

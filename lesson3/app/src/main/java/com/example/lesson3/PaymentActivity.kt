@@ -48,7 +48,6 @@ class PaymentActivity : AppCompatActivity() {
             handlePaymentSuccess()
         }
 
-        // --- Nút "Exit" (Chỉ thoát) ---
         binding.imgBtnExit.setOnClickListener {
             finish()
         }
