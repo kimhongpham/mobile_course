@@ -30,7 +30,6 @@ class RegisterSubjectActivity : AppCompatActivity() {
             displaySelectedSubjectsAndCalculateFee()
         }
 
-        // --- Nút Thanh toán ---
         binding.btnProceedToPayment.setOnClickListener {
             val totalFee = calculateTotalFee()
             if (totalFee > 0) {
@@ -40,15 +39,12 @@ class RegisterSubjectActivity : AppCompatActivity() {
             }
         }
 
-        // --- Nút Xác nhận (chỉ thông báo, không điều hướng) ---
         binding.btnConfirm.setOnClickListener {
             handleConfirmation()
         }
     }
 
-    /**
-     * Hiển thị danh sách môn học và tính tổng tiền.
-     */
+    //Hiển thị danh sách môn học và tính tổng tiền.
     private fun displaySelectedSubjectsAndCalculateFee() {
         val selectedSubjects = mutableListOf<String>()
 
@@ -74,9 +70,7 @@ class RegisterSubjectActivity : AppCompatActivity() {
         }
     }
 
-    /**
-     * Tính tổng học phí dựa vào các môn được chọn.
-     */
+//    Tính tổng học phí dựa vào các môn được chọn.
     private fun calculateTotalFee(): Int {
         var totalFee = 0
         if (binding.cbCPlusPlus.isChecked) totalFee += subjectFees["Lập trình C++"]!!
@@ -86,18 +80,12 @@ class RegisterSubjectActivity : AppCompatActivity() {
         return totalFee
     }
 
-    /**
-     * Chuyển sang màn hình Thanh toán và gửi tổng tiền.
-     */
     private fun proceedToPayment(totalFee: Int) {
         val intent = Intent(this, PaymentActivity::class.java)
         intent.putExtra("EXTRA_TOTAL_FEE_K", totalFee) // gửi đơn vị nghìn VNĐ
         startActivity(intent)
     }
 
-    /**
-     * Hiển thị thông báo chọn tình trạng (không điều hướng).
-     */
     private fun handleConfirmation() {
         when (binding.rgStatus.checkedRadioButtonId) {
             binding.rbTemporary.id -> {
