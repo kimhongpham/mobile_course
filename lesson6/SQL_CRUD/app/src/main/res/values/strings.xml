@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SQL_CRUD</string>
+    <string name="chon_lop">Chọn lớp</string>
+</resources>
